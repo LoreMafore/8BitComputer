@@ -1,0 +1,9 @@
+module computer(
+	inout [7:0] 8_bit_bus
+	);
+
+binary_counter counter(
+	.bus(8_bit_bus)
+	);
+	
+endmodule
