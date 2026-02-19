@@ -1,0 +1,19 @@
+# Flock lock files
+*.flock
+.flock
+**/*.flock
+
+# Flock temporary files
+.flock-tmp/
+.flock-cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
