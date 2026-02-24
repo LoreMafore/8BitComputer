@@ -1,34 +1,43 @@
 module computer(
-    //Base
-	input clk,
-	input reset,
-	inout [7:0] 8_bit_bus,
-	output [3:0] LED,
-    wire Reset,
+    input [3:0] pc_drive,
+    input CLK,
+    input RESET,
+    inout [7:0] eight_bit_bus,
+    output [3:0] LEDS 
+);
 
-    //Program Counter
-    input counter_enable,
-    input counter_out,
-    input counter_in,
-    input clear,
+//Control Wires 
+wire ENABLE_COUNTER;
+wire COUNTER_OUT;
+wire COUNTER_IN;
+wire COUNTER_CLEAR;
+
+assign ENABLE_COUNTER = pc_drive[0];
+assign COUNTER_OUT    = pc_drive[1];
+assign COUNTER_IN     = pc_drive[2];
+assign COUNTER_CLEAR  = pc_drive[3];
 
 
-    //A_B_ALU
-
-
-    //Output Register
-
-
-    //Instruction_Controls
-
-	);
-
+//Program Counter
 binary_counter counter(
-	.bus(8_bit_bus)
-    .CLK(clk)
-    .counterEnable(counter_enable)
-    .counterOut(counter_out)
-    .counterIn(counter_in)
-	);
-	
+    .clk(CLK),
+	.bus(eight_bit_bus),
+    .counter_enable(ENABLE_COUNTER),
+    .counter_out(COUNTER_OUT),
+    .counter_in(COUNTER_IN),
+    .clear(COUNTER_CLEAR),
+    .reset(RESET),
+    .leds(LEDS)
+);
+  
+
+//A_B_ALU
+
+
+//Output Register
+
+
+//Instruction_Controls
+
+
 endmodule
