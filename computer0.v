@@ -24,3 +24,4 @@ binary_counter counter(
     );
     
 endmodule
+
