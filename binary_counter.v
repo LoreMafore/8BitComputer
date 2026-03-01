@@ -8,12 +8,12 @@ module binary_counter(
     input reset,
     output reg [3:0] leds
     );
-
     
     reg [3:0] counter;
 
     initial begin
-        counter = 4'b1111;
+		  leds = 4'b0001;
+        counter = 4'b0001;
     end
 	 
     assign bus = counter_out ? {4'b0000, counter} : 8'bz;
@@ -23,7 +23,7 @@ module binary_counter(
 
         if (reset || clear)
         begin
-            counter <= 4'b1111;
+            counter <= 4'b1001;
         end
         else if (counter_in)
         begin
@@ -31,7 +31,7 @@ module binary_counter(
         end
         else if (counter_enable)
         begin
-            counter <= counter - 1;
+            counter <= counter + 1;
         end
 
     end
