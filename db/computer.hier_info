@@ -1,0 +1,58 @@
+|computer
+pc_drive[0] => ENABLE_COUNTER.IN1
+pc_drive[1] => COUNTER_OUT.IN1
+pc_drive[2] => COUNTER_IN.IN1
+pc_drive[3] => COUNTER_CLEAR.IN1
+CLK => CLK.IN1
+RESET => RESET.IN1
+eight_bit_bus[0] <> binary_counter:counter.bus
+eight_bit_bus[1] <> binary_counter:counter.bus
+eight_bit_bus[2] <> binary_counter:counter.bus
+eight_bit_bus[3] <> binary_counter:counter.bus
+eight_bit_bus[4] <> binary_counter:counter.bus
+eight_bit_bus[5] <> binary_counter:counter.bus
+eight_bit_bus[6] <> binary_counter:counter.bus
+eight_bit_bus[7] <> binary_counter:counter.bus
+LEDS[0] << binary_counter:counter.leds
+LEDS[1] << binary_counter:counter.leds
+LEDS[2] << binary_counter:counter.leds
+LEDS[3] << binary_counter:counter.leds
+
+
+|computer|binary_counter:counter
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+bus[0] <> bus[0]
+bus[1] <> bus[1]
+bus[2] <> bus[2]
+bus[3] <> bus[3]
+bus[4] <> bus[4]
+bus[5] <> bus[5]
+bus[6] <> bus[6]
+bus[7] <> bus[7]
+counter_enable => counter.OUTPUTSELECT
+counter_enable => counter.OUTPUTSELECT
+counter_enable => counter.OUTPUTSELECT
+counter_enable => counter.OUTPUTSELECT
+counter_out => bus[0].OE
+counter_out => bus[1].OE
+counter_out => bus[2].OE
+counter_out => bus[3].OE
+counter_out => bus[4].OE
+counter_out => bus[5].OE
+counter_out => bus[6].OE
+counter_out => bus[7].OE
+counter_in => counter.OUTPUTSELECT
+counter_in => counter.OUTPUTSELECT
+counter_in => counter.OUTPUTSELECT
+counter_in => counter.OUTPUTSELECT
+clear => always0.IN0
+reset => always0.IN1
+leds[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

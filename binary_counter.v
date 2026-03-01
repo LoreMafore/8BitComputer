@@ -1,45 +1,44 @@
 module binary_counter(
     input clk,
     inout [7:0] bus,
-    input counter_enable,
-    input counter_out,
-    input counter_in,
-    input clear,
+    input wire counter_enable,
+    input wire counter_out,
+    input wire counter_in,
+    input wire clear,
     input reset,
-    output[3:0] leds,
+    output reg [3:0] leds
     );
 
     
-    reg [3:0] counter = 4'b1111;
-    assign bus = 8'bz;
-   
-    always@((posedge clk && counter_enable == 1) or posedge reset or posedge clear ) begin : main_block
+    reg [3:0] counter;
 
-        if (reset or clear)
+    initial begin
+        counter = 4'b1111;
+    end
+	 
+    assign bus = counter_out ? {4'b0000, counter} : 8'bz;
+   
+    always @(posedge clk or posedge reset or posedge clear)
+    begin
+
+        if (reset || clear)
         begin
-            counter = 4'b1111;
-            diable main_block; 
+            counter <= 4'b1111;
         end
-        
-        counter <= counter + 1;
+        else if (counter_in)
+        begin
+            counter <= bus[3:0];
+        end
+        else if (counter_enable)
+        begin
+            counter <= counter - 1;
+        end
+
     end
 
-    always@((posedge clk && counter_in) or posedge counter_out) begin: bus_ops
-       
-        if(counter_out)
-        begin
-            bus[0] <= counter[0]
-            bus[1] <= counter[1]
-            bus[3] <= counter[3]
-            bus[4] <= counter[4]
-        end
-        
-        else
-        begin
-            bus[0] <= counter[0]
-            bus[1] <= counter[1]
-            bus[3] <= counter[3]
-            bus[4] <= counter[4]
-        end
+    always @(*)
+    begin 
+        leds <= counter;
+    end
 
 endmodule
