@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition"
 
-// DATE "03/02/2026 22:59:58"
+// DATE "03/03/2026 08:05:21"
 
 // 
 // Device: Altera 10CL025YU256I7G Package UFBGA256
@@ -304,7 +304,7 @@ defparam \pc_drive[3]~input .simulate_z_as = "z";
 // Location: LCCOMB_X52_Y17_N12
 cyclone10lp_lcell_comb \counter|counter[3]~13 (
 // Equation(s):
-// \counter|counter[3]~13_combout  = (\pc_drive[3]~input_o ) # (\RESET~input_o )
+// \counter|counter[3]~13_combout  = (!\pc_drive[3]~input_o  & \RESET~input_o )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -314,14 +314,14 @@ cyclone10lp_lcell_comb \counter|counter[3]~13 (
 	.combout(\counter|counter[3]~13_combout ),
 	.cout());
 // synopsys translate_off
-defparam \counter|counter[3]~13 .lut_mask = 16'hFFF0;
+defparam \counter|counter[3]~13 .lut_mask = 16'h0F00;
 defparam \counter|counter[3]~13 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X52_Y10_N16
 cyclone10lp_lcell_comb \counter|counter[0]~3 (
 // Equation(s):
-// \counter|counter[0]~3_combout  = (\counter|counter[3]~13_combout  & ((\RESET~input_o ) # (\counter|counter[0]~3_combout )))
+// \counter|counter[0]~3_combout  = (!\counter|counter[3]~13_combout  & ((\counter|counter[0]~3_combout ) # (!\RESET~input_o )))
 
 	.dataa(\RESET~input_o ),
 	.datab(gnd),
@@ -331,7 +331,7 @@ cyclone10lp_lcell_comb \counter|counter[0]~3 (
 	.combout(\counter|counter[0]~3_combout ),
 	.cout());
 // synopsys translate_off
-defparam \counter|counter[0]~3 .lut_mask = 16'hF0A0;
+defparam \counter|counter[0]~3 .lut_mask = 16'h0F05;
 defparam \counter|counter[0]~3 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -375,7 +375,7 @@ defparam \pc_drive[0]~input .bus_hold = "false";
 defparam \pc_drive[0]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N10
+// Location: LCCOMB_X52_Y10_N2
 cyclone10lp_lcell_comb \counter|counter~12 (
 // Equation(s):
 // \counter|counter~12_combout  = \pc_drive[0]~input_o  $ (\counter|counter[0]~4_combout )
@@ -392,7 +392,7 @@ defparam \counter|counter~12 .lut_mask = 16'h0FF0;
 defparam \counter|counter~12 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N12
+// Location: LCCOMB_X52_Y10_N28
 cyclone10lp_lcell_comb \counter|counter[0]~5 (
 // Equation(s):
 // \counter|counter[0]~5_combout  = \counter|counter[0]~3_combout  $ (((\pc_drive[2]~input_o  & ((!\counter|counter~12_combout ))) # (!\pc_drive[2]~input_o  & (\eight_bit_bus[0]~input_o ))))
@@ -412,7 +412,7 @@ defparam \counter|counter[0]~5 .sum_lutc_input = "datac";
 // Location: LCCOMB_X52_Y17_N6
 cyclone10lp_lcell_comb \counter|counter[0]~2 (
 // Equation(s):
-// \counter|counter[0]~2_combout  = (\RESET~input_o ) # (!\counter|counter[3]~13_combout )
+// \counter|counter[0]~2_combout  = (\counter|counter[3]~13_combout ) # (!\RESET~input_o )
 
 	.dataa(\counter|counter[3]~13_combout ),
 	.datab(gnd),
@@ -422,7 +422,7 @@ cyclone10lp_lcell_comb \counter|counter[0]~2 (
 	.combout(\counter|counter[0]~2_combout ),
 	.cout());
 // synopsys translate_off
-defparam \counter|counter[0]~2 .lut_mask = 16'hFF55;
+defparam \counter|counter[0]~2 .lut_mask = 16'hAAFF;
 defparam \counter|counter[0]~2 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -439,7 +439,7 @@ defparam \counter|counter[0]~2clkctrl .clock_type = "global clock";
 defparam \counter|counter[0]~2clkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: FF_X52_Y10_N13
+// Location: FF_X52_Y10_N29
 dffeas \counter|counter[0]~_emulated (
 	.clk(\CLK~input_o ),
 	.d(\counter|counter[0]~5_combout ),
@@ -458,10 +458,10 @@ defparam \counter|counter[0]~_emulated .is_wysiwyg = "true";
 defparam \counter|counter[0]~_emulated .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N2
+// Location: LCCOMB_X52_Y10_N6
 cyclone10lp_lcell_comb \counter|counter[0]~4 (
 // Equation(s):
-// \counter|counter[0]~4_combout  = (\counter|counter[3]~13_combout  & ((\RESET~input_o ) # (\counter|counter[0]~3_combout  $ (\counter|counter[0]~_emulated_q ))))
+// \counter|counter[0]~4_combout  = (!\counter|counter[3]~13_combout  & ((\counter|counter[0]~3_combout  $ (\counter|counter[0]~_emulated_q )) # (!\RESET~input_o )))
 
 	.dataa(\RESET~input_o ),
 	.datab(\counter|counter[0]~3_combout ),
@@ -471,7 +471,7 @@ cyclone10lp_lcell_comb \counter|counter[0]~4 (
 	.combout(\counter|counter[0]~4_combout ),
 	.cout());
 // synopsys translate_off
-defparam \counter|counter[0]~4 .lut_mask = 16'hB0E0;
+defparam \counter|counter[0]~4 .lut_mask = 16'h070D;
 defparam \counter|counter[0]~4 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -485,7 +485,7 @@ defparam \pc_drive[1]~input .bus_hold = "false";
 defparam \pc_drive[1]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N28
+// Location: LCCOMB_X52_Y10_N20
 cyclone10lp_lcell_comb \counter|counter[1]~0 (
 // Equation(s):
 // \counter|counter[1]~0_combout  = \counter|counter [1] $ (((!\pc_drive[0]~input_o  & \counter|counter[0]~4_combout )))
@@ -515,7 +515,7 @@ defparam \eight_bit_bus[1]~input .simulate_z_as = "z";
 // Location: LCCOMB_X52_Y17_N16
 cyclone10lp_lcell_comb \counter|counter[2]~11 (
 // Equation(s):
-// \counter|counter[2]~11_combout  = (\RESET~input_o ) # (!\pc_drive[3]~input_o )
+// \counter|counter[2]~11_combout  = (!\RESET~input_o ) # (!\pc_drive[3]~input_o )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -525,7 +525,7 @@ cyclone10lp_lcell_comb \counter|counter[2]~11 (
 	.combout(\counter|counter[2]~11_combout ),
 	.cout());
 // synopsys translate_off
-defparam \counter|counter[2]~11 .lut_mask = 16'hFF0F;
+defparam \counter|counter[2]~11 .lut_mask = 16'h0FFF;
 defparam \counter|counter[2]~11 .sum_lutc_input = "datac";
 // synopsys translate_on
 
@@ -542,7 +542,7 @@ defparam \counter|counter[2]~11clkctrl .clock_type = "global clock";
 defparam \counter|counter[2]~11clkctrl .ena_register_mode = "none";
 // synopsys translate_on
 
-// Location: FF_X52_Y10_N29
+// Location: FF_X52_Y10_N21
 dffeas \counter|counter[1] (
 	.clk(\CLK~input_o ),
 	.d(\counter|counter[1]~0_combout ),
@@ -561,24 +561,24 @@ defparam \counter|counter[1] .is_wysiwyg = "true";
 defparam \counter|counter[1] .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N0
+// Location: LCCOMB_X52_Y10_N12
 cyclone10lp_lcell_comb \counter|Add0~0 (
 // Equation(s):
 // \counter|Add0~0_combout  = \counter|counter [2] $ (((\counter|counter [1] & \counter|counter[0]~4_combout )))
 
-	.dataa(gnd),
-	.datab(\counter|counter [2]),
+	.dataa(\counter|counter [2]),
+	.datab(gnd),
 	.datac(\counter|counter [1]),
 	.datad(\counter|counter[0]~4_combout ),
 	.cin(gnd),
 	.combout(\counter|Add0~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \counter|Add0~0 .lut_mask = 16'h3CCC;
+defparam \counter|Add0~0 .lut_mask = 16'h5AAA;
 defparam \counter|Add0~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N18
+// Location: LCCOMB_X52_Y10_N30
 cyclone10lp_lcell_comb \counter|counter[2]~1 (
 // Equation(s):
 // \counter|counter[2]~1_combout  = (\pc_drive[0]~input_o  & (\counter|counter [2])) # (!\pc_drive[0]~input_o  & ((\counter|Add0~0_combout )))
@@ -605,7 +605,7 @@ defparam \eight_bit_bus[2]~input .bus_hold = "false";
 defparam \eight_bit_bus[2]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: FF_X52_Y10_N19
+// Location: FF_X52_Y10_N31
 dffeas \counter|counter[2] (
 	.clk(\CLK~input_o ),
 	.d(\counter|counter[2]~1_combout ),
@@ -634,41 +634,41 @@ defparam \eight_bit_bus[3]~input .bus_hold = "false";
 defparam \eight_bit_bus[3]~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N20
+// Location: LCCOMB_X52_Y10_N4
 cyclone10lp_lcell_comb \counter|counter~14 (
 // Equation(s):
 // \counter|counter~14_combout  = (!\pc_drive[0]~input_o  & \counter|counter [2])
 
 	.dataa(gnd),
-	.datab(gnd),
-	.datac(\pc_drive[0]~input_o ),
-	.datad(\counter|counter [2]),
+	.datab(\pc_drive[0]~input_o ),
+	.datac(\counter|counter [2]),
+	.datad(gnd),
 	.cin(gnd),
 	.combout(\counter|counter~14_combout ),
 	.cout());
 // synopsys translate_off
-defparam \counter|counter~14 .lut_mask = 16'h0F00;
+defparam \counter|counter~14 .lut_mask = 16'h3030;
 defparam \counter|counter~14 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N6
+// Location: LCCOMB_X52_Y10_N18
 cyclone10lp_lcell_comb \counter|counter~15 (
 // Equation(s):
-// \counter|counter~15_combout  = \counter|counter[3]~6_combout  $ (((\counter|counter [1] & (\counter|counter[0]~4_combout  & \counter|counter~14_combout ))))
+// \counter|counter~15_combout  = \counter|counter[3]~6_combout  $ (((\counter|counter[0]~4_combout  & (\counter|counter [1] & \counter|counter~14_combout ))))
 
-	.dataa(\counter|counter [1]),
-	.datab(\counter|counter[0]~4_combout ),
-	.datac(\counter|counter[3]~6_combout ),
-	.datad(\counter|counter~14_combout ),
+	.dataa(\counter|counter[0]~4_combout ),
+	.datab(\counter|counter [1]),
+	.datac(\counter|counter~14_combout ),
+	.datad(\counter|counter[3]~6_combout ),
 	.cin(gnd),
 	.combout(\counter|counter~15_combout ),
 	.cout());
 // synopsys translate_off
-defparam \counter|counter~15 .lut_mask = 16'h78F0;
+defparam \counter|counter~15 .lut_mask = 16'h7F80;
 defparam \counter|counter~15 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N30
+// Location: LCCOMB_X52_Y10_N10
 cyclone10lp_lcell_comb \counter|counter[3]~7 (
 // Equation(s):
 // \counter|counter[3]~7_combout  = \counter|counter[0]~3_combout  $ (((\pc_drive[2]~input_o  & ((\counter|counter~15_combout ))) # (!\pc_drive[2]~input_o  & (\eight_bit_bus[3]~input_o ))))
@@ -685,7 +685,7 @@ defparam \counter|counter[3]~7 .lut_mask = 16'h369C;
 defparam \counter|counter[3]~7 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: FF_X52_Y10_N31
+// Location: FF_X52_Y10_N11
 dffeas \counter|counter[3]~_emulated (
 	.clk(\CLK~input_o ),
 	.d(\counter|counter[3]~7_combout ),
@@ -704,20 +704,20 @@ defparam \counter|counter[3]~_emulated .is_wysiwyg = "true";
 defparam \counter|counter[3]~_emulated .power_up = "low";
 // synopsys translate_on
 
-// Location: LCCOMB_X52_Y10_N4
+// Location: LCCOMB_X52_Y10_N0
 cyclone10lp_lcell_comb \counter|counter[3]~6 (
 // Equation(s):
-// \counter|counter[3]~6_combout  = (\counter|counter[3]~13_combout  & ((\RESET~input_o ) # (\counter|counter[0]~3_combout  $ (\counter|counter[3]~_emulated_q ))))
+// \counter|counter[3]~6_combout  = (!\counter|counter[3]~13_combout  & ((\counter|counter[0]~3_combout  $ (\counter|counter[3]~_emulated_q )) # (!\RESET~input_o )))
 
 	.dataa(\RESET~input_o ),
 	.datab(\counter|counter[0]~3_combout ),
-	.datac(\counter|counter[3]~_emulated_q ),
-	.datad(\counter|counter[3]~13_combout ),
+	.datac(\counter|counter[3]~13_combout ),
+	.datad(\counter|counter[3]~_emulated_q ),
 	.cin(gnd),
 	.combout(\counter|counter[3]~6_combout ),
 	.cout());
 // synopsys translate_off
-defparam \counter|counter[3]~6 .lut_mask = 16'hBE00;
+defparam \counter|counter[3]~6 .lut_mask = 16'h070D;
 defparam \counter|counter[3]~6 .sum_lutc_input = "datac";
 // synopsys translate_on
 

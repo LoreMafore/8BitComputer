@@ -15,15 +15,13 @@ module binary_counter(
         counter = 4'b0001;
     end
 	 
-    // Tri-state buffer for the bus
     assign bus = counter_out ? {4'b0000, counter} : 8'bz;
 
-    // Sequential logic: Only include the clock and async reset/clear
     always @(posedge clk or posedge reset or posedge clear)
     begin
         if (reset)
         begin
-            counter <= 4'b1001; // Reset to 0
+            counter <= 4'b1001; 
         end
         else if (clear)
         begin

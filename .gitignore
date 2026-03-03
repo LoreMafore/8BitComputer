@@ -17,3 +17,7 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+db/
+incremental_db/
+output_files/
