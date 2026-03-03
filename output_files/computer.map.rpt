@@ -1,5 +1,5 @@
 Analysis & Synthesis report for computer
-Sat Feb 28 22:04:00 2026
+Mon Mar  2 22:59:48 2026
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -14,12 +14,11 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
- 14. Analysis & Synthesis Suppressed Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,13 +45,13 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 28 22:04:00 2026           ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar  2 22:59:48 2026           ;
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; computer                                        ;
 ; Top-level Entity Name              ; computer                                        ;
 ; Family                             ; Cyclone 10 LP                                   ;
-; Total logic elements               ; 8                                               ;
-;     Total combinational functions  ; 8                                               ;
+; Total logic elements               ; 14                                              ;
+;     Total combinational functions  ; 14                                              ;
 ;     Dedicated logic registers      ; 4                                               ;
 ; Total registers                    ; 4                                               ;
 ; Total pins                         ; 18                                              ;
@@ -181,16 +180,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+-------------------+
 ; Resource                                    ; Usage             ;
 +---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 8                 ;
+; Estimated Total logic elements              ; 14                ;
 ;                                             ;                   ;
-; Total combinational functions               ; 8                 ;
+; Total combinational functions               ; 14                ;
 ; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 3                 ;
-;     -- 3 input functions                    ; 3                 ;
-;     -- <=2 input functions                  ; 2                 ;
+;     -- 4 input functions                    ; 5                 ;
+;     -- 3 input functions                    ; 4                 ;
+;     -- <=2 input functions                  ; 5                 ;
 ;                                             ;                   ;
 ; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 8                 ;
+;     -- normal mode                          ; 14                ;
 ;     -- arithmetic mode                      ; 0                 ;
 ;                                             ;                   ;
 ; Total registers                             ; 4                 ;
@@ -203,8 +202,8 @@ on the Quartus Prime software download page.
 ;                                             ;                   ;
 ; Maximum fan-out node                        ; pc_drive[1]~input ;
 ; Maximum fan-out                             ; 8                 ;
-; Total fan-out                               ; 83                ;
-; Average fan-out                             ; 1.48              ;
+; Total fan-out                               ; 100               ;
+; Average fan-out                             ; 1.61              ;
 +---------------------------------------------+-------------------+
 
 
@@ -213,8 +212,8 @@ on the Quartus Prime software download page.
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Entity Name    ; Library Name ;
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+----------------+--------------+
-; |computer                   ; 8 (0)               ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |computer                        ; computer       ; work         ;
-;    |binary_counter:counter| ; 8 (8)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|binary_counter:counter ; binary_counter ; work         ;
+; |computer                   ; 14 (0)              ; 4 (0)                     ; 0           ; 0            ; 0       ; 0         ; 18   ; 0            ; |computer                        ; computer       ; work         ;
+;    |binary_counter:counter| ; 14 (14)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |computer|binary_counter:counter ; binary_counter ; work         ;
 +-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -232,17 +231,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; binary_counter:counter|counter[0]      ; 6       ;
-; binary_counter:counter|counter[3]      ; 3       ;
-; Total number of inverted registers = 2 ;         ;
-+----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -264,15 +252,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;     CLR               ; 2                           ;
 ;     CLR SLD           ; 2                           ;
 ; cycloneiii_io_obuf    ; 8                           ;
-; cycloneiii_lcell_comb ; 10                          ;
-;     normal            ; 10                          ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 3                           ;
+; cycloneiii_lcell_comb ; 14                          ;
+;     normal            ; 14                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 5                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 0.94                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.03                        ;
 +-----------------------+-----------------------------+
 
 
@@ -291,7 +278,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Sat Feb 28 22:03:54 2026
+    Info: Processing started: Mon Mar  2 22:59:42 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off computer -c computer
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -301,25 +288,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file binary_
     Info (12023): Found entity 1: binary_counter File: C:/Users/momer/UMary/CSC457/8BitComputer/binary_counter.v Line: 1
 Info (12127): Elaborating entity "computer" for the top level hierarchy
 Info (12128): Elaborating entity "binary_counter" for hierarchy "binary_counter:counter" File: C:/Users/momer/UMary/CSC457/8BitComputer/computer.v Line: 31
-Warning (10230): Verilog HDL assignment warning at binary_counter.v(34): truncated value with size 32 to match size of target (4) File: C:/Users/momer/UMary/CSC457/8BitComputer/binary_counter.v Line: 34
-Info (13000): Registers with preset signals will power-up high File: C:/Users/momer/UMary/CSC457/8BitComputer/binary_counter.v Line: 28
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "binary_counter:counter|counter[0]" is converted into an equivalent circuit using register "binary_counter:counter|counter[0]~_emulated" and latch "binary_counter:counter|counter[0]~3" File: C:/Users/momer/UMary/CSC457/8BitComputer/binary_counter.v Line: 32
+    Warning (13310): Register "binary_counter:counter|counter[3]" is converted into an equivalent circuit using register "binary_counter:counter|counter[3]~_emulated" and latch "binary_counter:counter|counter[0]~3" File: C:/Users/momer/UMary/CSC457/8BitComputer/binary_counter.v Line: 32
 Info (286030): Timing-Driven Synthesis is running
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register binary_counter:counter|counter[3] will power up to High File: C:/Users/momer/UMary/CSC457/8BitComputer/binary_counter.v Line: 28
 Info (144001): Generated suppressed messages file C:/Users/momer/UMary/CSC457/8BitComputer/output_files/computer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 32 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 4 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 8 logic cells
+    Info (21061): Implemented 14 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4826 megabytes
-    Info: Processing ended: Sat Feb 28 22:04:00 2026
+    Info: Processing ended: Mon Mar  2 22:59:48 2026
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+

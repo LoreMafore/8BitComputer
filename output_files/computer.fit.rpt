@@ -1,5 +1,5 @@
 Fitter report for computer
-Sat Feb 28 22:04:05 2026
+Mon Mar  2 22:59:53 2026
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -67,15 +67,15 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sat Feb 28 22:04:05 2026           ;
+; Fitter Status                      ; Successful - Mon Mar  2 22:59:53 2026           ;
 ; Quartus Prime Version              ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                      ; computer                                        ;
 ; Top-level Entity Name              ; computer                                        ;
 ; Family                             ; Cyclone 10 LP                                   ;
 ; Device                             ; 10CL025YU256I7G                                 ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 8 / 24,624 ( < 1 % )                            ;
-;     Total combinational functions  ; 8 / 24,624 ( < 1 % )                            ;
+; Total logic elements               ; 14 / 24,624 ( < 1 % )                           ;
+;     Total combinational functions  ; 14 / 24,624 ( < 1 % )                           ;
 ;     Dedicated logic registers      ; 4 / 24,624 ( < 1 % )                            ;
 ; Total registers                    ; 4                                               ;
 ; Total pins                         ; 18 / 151 ( 12 % )                               ;
@@ -154,12 +154,12 @@ on the Quartus Prime software download page.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 10          ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
+; Average used               ; 1.06        ;
 ; Maximum used               ; 10          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-10        ;   0.6%      ;
+;     Processors 2-10        ;   0.7%      ;
 +----------------------------+-------------+
 
 
@@ -169,8 +169,8 @@ on the Quartus Prime software download page.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 68 ) ; 0.00 % ( 0 / 68 )          ; 0.00 % ( 0 / 68 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 68 ) ; 0.00 % ( 0 / 68 )          ; 0.00 % ( 0 / 68 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 75 ) ; 0.00 % ( 0 / 75 )          ; 0.00 % ( 0 / 75 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 75 ) ; 0.00 % ( 0 / 75 )          ; 0.00 % ( 0 / 75 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -193,7 +193,7 @@ on the Quartus Prime software download page.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 58 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 65 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -204,127 +204,127 @@ on the Quartus Prime software download page.
 The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output_files/computer.pin.
 
 
-+--------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                      ;
-+---------------------------------------------+----------------------+
-; Resource                                    ; Usage                ;
-+---------------------------------------------+----------------------+
-; Total logic elements                        ; 8 / 24,624 ( < 1 % ) ;
-;     -- Combinational with no register       ; 4                    ;
-;     -- Register only                        ; 0                    ;
-;     -- Combinational with a register        ; 4                    ;
-;                                             ;                      ;
-; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 3                    ;
-;     -- 3 input functions                    ; 3                    ;
-;     -- <=2 input functions                  ; 2                    ;
-;     -- Register only                        ; 0                    ;
-;                                             ;                      ;
-; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 8                    ;
-;     -- arithmetic mode                      ; 0                    ;
-;                                             ;                      ;
-; Total registers*                            ; 4 / 25,304 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 4 / 24,624 ( < 1 % ) ;
-;     -- I/O registers                        ; 0 / 680 ( 0 % )      ;
-;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 2 / 1,539 ( < 1 % )  ;
-; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 18 / 151 ( 12 % )    ;
-;     -- Clock pins                           ; 2 / 8 ( 25 % )       ;
-;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )        ;
-;                                             ;                      ;
-; M9Ks                                        ; 0 / 66 ( 0 % )       ;
-; Total block memory bits                     ; 0 / 608,256 ( 0 % )  ;
-; Total block memory implementation bits      ; 0 / 608,256 ( 0 % )  ;
-; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )      ;
-; PLLs                                        ; 0 / 4 ( 0 % )        ;
-; Global signals                              ; 1                    ;
-;     -- Global clocks                        ; 1 / 20 ( 5 % )       ;
-; JTAGs                                       ; 0 / 1 ( 0 % )        ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
-; Oscillator blocks                           ; 0 / 1 ( 0 % )        ;
-; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%   ;
-; Peak interconnect usage (total/H/V)         ; 0.3% / 0.3% / 0.4%   ;
-; Maximum fan-out                             ; 8                    ;
-; Highest non-global fan-out                  ; 8                    ;
-; Total fan-out                               ; 89                   ;
-; Average fan-out                             ; 1.33                 ;
-+---------------------------------------------+----------------------+
++---------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                       ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Total logic elements                        ; 14 / 24,624 ( < 1 % ) ;
+;     -- Combinational with no register       ; 10                    ;
+;     -- Register only                        ; 0                     ;
+;     -- Combinational with a register        ; 4                     ;
+;                                             ;                       ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 5                     ;
+;     -- 3 input functions                    ; 4                     ;
+;     -- <=2 input functions                  ; 5                     ;
+;     -- Register only                        ; 0                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 14                    ;
+;     -- arithmetic mode                      ; 0                     ;
+;                                             ;                       ;
+; Total registers*                            ; 4 / 25,304 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 4 / 24,624 ( < 1 % )  ;
+;     -- I/O registers                        ; 0 / 680 ( 0 % )       ;
+;                                             ;                       ;
+; Total LABs:  partially or completely used   ; 2 / 1,539 ( < 1 % )   ;
+; Virtual pins                                ; 0                     ;
+; I/O pins                                    ; 18 / 151 ( 12 % )     ;
+;     -- Clock pins                           ; 2 / 8 ( 25 % )        ;
+;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )         ;
+;                                             ;                       ;
+; M9Ks                                        ; 0 / 66 ( 0 % )        ;
+; Total block memory bits                     ; 0 / 608,256 ( 0 % )   ;
+; Total block memory implementation bits      ; 0 / 608,256 ( 0 % )   ;
+; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )       ;
+; PLLs                                        ; 0 / 4 ( 0 % )         ;
+; Global signals                              ; 2                     ;
+;     -- Global clocks                        ; 2 / 20 ( 10 % )       ;
+; JTAGs                                       ; 0 / 1 ( 0 % )         ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
+; Oscillator blocks                           ; 0 / 1 ( 0 % )         ;
+; Impedance control blocks                    ; 0 / 4 ( 0 % )         ;
+; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%    ;
+; Peak interconnect usage (total/H/V)         ; 0.5% / 0.5% / 0.5%    ;
+; Maximum fan-out                             ; 8                     ;
+; Highest non-global fan-out                  ; 8                     ;
+; Total fan-out                               ; 107                   ;
+; Average fan-out                             ; 1.45                  ;
++---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
 
-+----------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                        ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Statistic                                   ; Top                 ; hard_block:auto_generated_inst ;
-+---------------------------------------------+---------------------+--------------------------------+
-; Difficulty Clustering Region                ; Low                 ; Low                            ;
-;                                             ;                     ;                                ;
-; Total logic elements                        ; 8 / 24624 ( < 1 % ) ; 0 / 24624 ( 0 % )              ;
-;     -- Combinational with no register       ; 4                   ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
-;     -- Combinational with a register        ; 4                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 3                   ; 0                              ;
-;     -- 3 input functions                    ; 3                   ; 0                              ;
-;     -- <=2 input functions                  ; 2                   ; 0                              ;
-;     -- Register only                        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 8                   ; 0                              ;
-;     -- arithmetic mode                      ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Total registers                             ; 4                   ; 0                              ;
-;     -- Dedicated logic registers            ; 4 / 24624 ( < 1 % ) ; 0 / 24624 ( 0 % )              ;
-;     -- I/O registers                        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 2 / 1539 ( < 1 % )  ; 0 / 1539 ( 0 % )               ;
-;                                             ;                     ;                                ;
-; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 18                  ; 0                              ;
-; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )     ; 0 / 132 ( 0 % )                ;
-; Total memory bits                           ; 0                   ; 0                              ;
-; Total RAM block bits                        ; 0                   ; 0                              ;
-; Clock control block                         ; 1 / 24 ( 4 % )      ; 0 / 24 ( 0 % )                 ;
-;                                             ;                     ;                                ;
-; Connections                                 ;                     ;                                ;
-;     -- Input Connections                    ; 8                   ; 0                              ;
-;     -- Registered Input Connections         ; 0                   ; 0                              ;
-;     -- Output Connections                   ; 8                   ; 0                              ;
-;     -- Registered Output Connections        ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 84                  ; 5                              ;
-;     -- Registered Connections               ; 20                  ; 0                              ;
-;                                             ;                     ;                                ;
-; External Connections                        ;                     ;                                ;
-;     -- Top                                  ; 16                  ; 0                              ;
-;     -- hard_block:auto_generated_inst       ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Partition Interface                         ;                     ;                                ;
-;     -- Input Ports                          ; 6                   ; 0                              ;
-;     -- Output Ports                         ; 4                   ; 0                              ;
-;     -- Bidir Ports                          ; 8                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Registered Ports                            ;                     ;                                ;
-;     -- Registered Input Ports               ; 0                   ; 0                              ;
-;     -- Registered Output Ports              ; 0                   ; 0                              ;
-;                                             ;                     ;                                ;
-; Port Connectivity                           ;                     ;                                ;
-;     -- Input Ports driven by GND            ; 0                   ; 0                              ;
-;     -- Output Ports driven by GND           ; 0                   ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0                   ; 0                              ;
-;     -- Output Ports driven by VCC           ; 0                   ; 0                              ;
-;     -- Input Ports with no Source           ; 0                   ; 0                              ;
-;     -- Output Ports with no Source          ; 0                   ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0                   ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0                   ; 0                              ;
-+---------------------------------------------+---------------------+--------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                         ;
++---------------------------------------------+----------------------+--------------------------------+
+; Statistic                                   ; Top                  ; hard_block:auto_generated_inst ;
++---------------------------------------------+----------------------+--------------------------------+
+; Difficulty Clustering Region                ; Low                  ; Low                            ;
+;                                             ;                      ;                                ;
+; Total logic elements                        ; 14 / 24624 ( < 1 % ) ; 0 / 24624 ( 0 % )              ;
+;     -- Combinational with no register       ; 10                   ; 0                              ;
+;     -- Register only                        ; 0                    ; 0                              ;
+;     -- Combinational with a register        ; 4                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic element usage by number of LUT inputs ;                      ;                                ;
+;     -- 4 input functions                    ; 5                    ; 0                              ;
+;     -- 3 input functions                    ; 4                    ; 0                              ;
+;     -- <=2 input functions                  ; 5                    ; 0                              ;
+;     -- Register only                        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Logic elements by mode                      ;                      ;                                ;
+;     -- normal mode                          ; 14                   ; 0                              ;
+;     -- arithmetic mode                      ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Total registers                             ; 4                    ; 0                              ;
+;     -- Dedicated logic registers            ; 4 / 24624 ( < 1 % )  ; 0 / 24624 ( 0 % )              ;
+;     -- I/O registers                        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Total LABs:  partially or completely used   ; 2 / 1539 ( < 1 % )   ; 0 / 1539 ( 0 % )               ;
+;                                             ;                      ;                                ;
+; Virtual pins                                ; 0                    ; 0                              ;
+; I/O pins                                    ; 18                   ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )      ; 0 / 132 ( 0 % )                ;
+; Total memory bits                           ; 0                    ; 0                              ;
+; Total RAM block bits                        ; 0                    ; 0                              ;
+; Clock control block                         ; 2 / 24 ( 8 % )       ; 0 / 24 ( 0 % )                 ;
+;                                             ;                      ;                                ;
+; Connections                                 ;                      ;                                ;
+;     -- Input Connections                    ; 8                    ; 0                              ;
+;     -- Registered Input Connections         ; 0                    ; 0                              ;
+;     -- Output Connections                   ; 8                    ; 0                              ;
+;     -- Registered Output Connections        ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Internal Connections                        ;                      ;                                ;
+;     -- Total Connections                    ; 102                  ; 5                              ;
+;     -- Registered Connections               ; 12                   ; 0                              ;
+;                                             ;                      ;                                ;
+; External Connections                        ;                      ;                                ;
+;     -- Top                                  ; 16                   ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Partition Interface                         ;                      ;                                ;
+;     -- Input Ports                          ; 6                    ; 0                              ;
+;     -- Output Ports                         ; 4                    ; 0                              ;
+;     -- Bidir Ports                          ; 8                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Registered Ports                            ;                      ;                                ;
+;     -- Registered Input Ports               ; 0                    ; 0                              ;
+;     -- Registered Output Ports              ; 0                    ; 0                              ;
+;                                             ;                      ;                                ;
+; Port Connectivity                           ;                      ;                                ;
+;     -- Input Ports driven by GND            ; 0                    ; 0                              ;
+;     -- Output Ports driven by GND           ; 0                    ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0                    ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0                    ; 0                              ;
+;     -- Input Ports with no Source           ; 0                    ; 0                              ;
+;     -- Output Ports with no Source          ; 0                    ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0                    ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0                    ; 0                              ;
++---------------------------------------------+----------------------+--------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -333,11 +333,11 @@ The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 ; CLK         ; L13   ; 5        ; 53           ; 10           ; 14           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVCMOS ; --                        ; User                 ; no        ;
-; RESET       ; M16   ; 5        ; 53           ; 17           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; RESET       ; M16   ; 5        ; 53           ; 17           ; 21           ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; pc_drive[0] ; E15   ; 6        ; 53           ; 17           ; 0            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; pc_drive[1] ; F14   ; 6        ; 53           ; 24           ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 ; pc_drive[2] ; C11   ; 7        ; 38           ; 34           ; 0            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
-; pc_drive[3] ; D9    ; 7        ; 31           ; 34           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
+; pc_drive[3] ; D9    ; 7        ; 31           ; 34           ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ; no        ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -358,14 +358,14 @@ The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output
 +------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+------------------------------+
 ; Name             ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination                ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group          ;
 +------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+------------------------------+
-; eight_bit_bus[0] ; L16   ; 5        ; 53           ; 11           ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pc_drive[1]~input (inverted) ;
-; eight_bit_bus[1] ; K16   ; 5        ; 53           ; 12           ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pc_drive[1]~input (inverted) ;
-; eight_bit_bus[2] ; R16   ; 5        ; 53           ; 8            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pc_drive[1]~input (inverted) ;
-; eight_bit_bus[3] ; N15   ; 5        ; 53           ; 9            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pc_drive[1]~input (inverted) ;
-; eight_bit_bus[4] ; G16   ; 6        ; 53           ; 20           ; 21           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; pc_drive[1]~input            ;
-; eight_bit_bus[5] ; N16   ; 5        ; 53           ; 9            ; 21           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; pc_drive[1]~input            ;
-; eight_bit_bus[6] ; L14   ; 5        ; 53           ; 9            ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; pc_drive[1]~input            ;
-; eight_bit_bus[7] ; G15   ; 6        ; 53           ; 20           ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; pc_drive[1]~input            ;
+; eight_bit_bus[0] ; L16   ; 5        ; 53           ; 11           ; 7            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pc_drive[1]~input            ;
+; eight_bit_bus[1] ; K16   ; 5        ; 53           ; 12           ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pc_drive[1]~input            ;
+; eight_bit_bus[2] ; R16   ; 5        ; 53           ; 8            ; 21           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pc_drive[1]~input            ;
+; eight_bit_bus[3] ; N15   ; 5        ; 53           ; 9            ; 14           ; 1                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; User                 ; 0 pF                 ; pc_drive[1]~input            ;
+; eight_bit_bus[4] ; B16   ; 6        ; 53           ; 22           ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; pc_drive[1]~input (inverted) ;
+; eight_bit_bus[5] ; G15   ; 6        ; 53           ; 20           ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; pc_drive[1]~input (inverted) ;
+; eight_bit_bus[6] ; F15   ; 6        ; 53           ; 22           ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; pc_drive[1]~input (inverted) ;
+; eight_bit_bus[7] ; G16   ; 6        ; 53           ; 20           ; 21           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; Fitter               ; 0 pF                 ; pc_drive[1]~input (inverted) ;
 +------------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+----------------------+----------------------+------------------------------+
 
 
@@ -386,9 +386,10 @@ The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output
 ; H12      ; MSEL1                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; G12      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; G12      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
-; G16      ; DIFFIO_R5n, INIT_DONE       ; Use as regular IO        ; eight_bit_bus[4]        ; Dual Purpose Pin          ;
-; G15      ; DIFFIO_R5p, CRC_ERROR       ; Use as regular IO        ; eight_bit_bus[7]        ; Dual Purpose Pin          ;
+; G16      ; DIFFIO_R5n, INIT_DONE       ; Use as regular IO        ; eight_bit_bus[7]        ; Dual Purpose Pin          ;
+; G15      ; DIFFIO_R5p, CRC_ERROR       ; Use as regular IO        ; eight_bit_bus[5]        ; Dual Purpose Pin          ;
 ; F16      ; DIFFIO_R4n, nCEO            ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
+; F15      ; DIFFIO_R4p, CLKUSR          ; Use as regular IO        ; eight_bit_bus[6]        ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
@@ -401,8 +402,8 @@ The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output
 ; 2        ; 2 / 16 ( 13 % ) ; 2.5V          ; --           ;
 ; 3        ; 2 / 25 ( 8 % )  ; 2.5V          ; --           ;
 ; 4        ; 0 / 20 ( 0 % )  ; 2.5V          ; --           ;
-; 5        ; 8 / 18 ( 44 % ) ; 2.5V          ; --           ;
-; 6        ; 5 / 13 ( 38 % ) ; 2.5V          ; --           ;
+; 5        ; 6 / 18 ( 33 % ) ; 2.5V          ; --           ;
+; 6        ; 7 / 13 ( 54 % ) ; 2.5V          ; --           ;
 ; 7        ; 2 / 24 ( 8 % )  ; 2.5V          ; --           ;
 ; 8        ; 0 / 23 ( 0 % )  ; 2.5V          ; --           ;
 +----------+-----------------+---------------+--------------+
@@ -444,7 +445,7 @@ The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output
 ; B13      ; 180        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B14      ; 182        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B15      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B16      ; 164        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; B16      ; 164        ; 6        ; eight_bit_bus[4]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C1       ; 7          ; 1        ; ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP     ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; C2       ; 6          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C3       ; 245        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -507,7 +508,7 @@ The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output
 ; F12      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; F13      ; 161        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F14      ; 167        ; 6        ; pc_drive[1]                                               ; input  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; F15      ; 163        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; F15      ; 163        ; 6        ; eight_bit_bus[6]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F16      ; 162        ; 6        ; ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G1       ; 16         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G2       ; 15         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -524,8 +525,8 @@ The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output
 ; G12      ; 156        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; G13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G14      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; G15      ; 160        ; 6        ; eight_bit_bus[7]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G16      ; 159        ; 6        ; eight_bit_bus[4]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G15      ; 160        ; 6        ; eight_bit_bus[5]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G16      ; 159        ; 6        ; eight_bit_bus[7]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; H1       ; 17         ; 1        ; ~ALTERA_DCLK~                                             ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; H2       ; 18         ; 1        ; ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP          ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; On           ;
 ; H3       ; 21         ; 1        ; #TCK                                                      ; input  ;              ;         ; --         ;                 ; --       ; --           ;
@@ -587,7 +588,7 @@ The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output
 ; L11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; L12      ;            ; --       ; VCCA4                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; L13      ; 136        ; 5        ; CLK                                                       ; input  ; 3.3-V LVCMOS ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; L14      ; 134        ; 5        ; eight_bit_bus[6]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L14      ; 134        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; L15      ; 138        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L16      ; 137        ; 5        ; eight_bit_bus[0]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; M1       ; 28         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -621,7 +622,7 @@ The pin-out file can be found in C:/Users/momer/UMary/CSC457/8BitComputer/output
 ; N13      ;            ;          ; VCCD_PLL4                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N14      ; 126        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; N15      ; 133        ; 5        ; eight_bit_bus[3]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; N16      ; 132        ; 5        ; eight_bit_bus[5]                                          ; bidir  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N16      ; 132        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P1       ; 51         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; P2       ; 50         ; 2        ; LEDS[2]                                                   ; output ; 2.5 V        ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P3       ; 53         ; 3        ; LEDS[0]                                                   ; output ; 2.5 V        ;         ; Column I/O ; Y               ; no       ; Off          ;
@@ -691,10 +692,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; eight_bit_bus[5] ; Incomplete set of assignments ;
 ; eight_bit_bus[6] ; Incomplete set of assignments ;
 ; eight_bit_bus[7] ; Incomplete set of assignments ;
-; pc_drive[0]      ; Incomplete set of assignments ;
-; pc_drive[2]      ; Incomplete set of assignments ;
-; pc_drive[3]      ; Incomplete set of assignments ;
 ; RESET            ; Incomplete set of assignments ;
+; pc_drive[0]      ; Incomplete set of assignments ;
+; pc_drive[3]      ; Incomplete set of assignments ;
+; pc_drive[2]      ; Incomplete set of assignments ;
 ; pc_drive[1]      ; Incomplete set of assignments ;
 ; eight_bit_bus[4] ; Missing location assignment   ;
 ; eight_bit_bus[5] ; Missing location assignment   ;
@@ -708,8 +709,8 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name              ; Entity Name    ; Library Name ;
 +-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+----------------+--------------+
-; |computer                   ; 8 (0)       ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 18   ; 0            ; 4 (0)        ; 0 (0)             ; 4 (0)            ; |computer                        ; computer       ; work         ;
-;    |binary_counter:counter| ; 8 (8)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; |computer|binary_counter:counter ; binary_counter ; work         ;
+; |computer                   ; 14 (0)      ; 4 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 18   ; 0            ; 10 (0)       ; 0 (0)             ; 4 (0)            ; |computer                        ; computer       ; work         ;
+;    |binary_counter:counter| ; 14 (14)     ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 4 (4)            ; |computer|binary_counter:counter ; binary_counter ; work         ;
 +-----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -723,85 +724,88 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDS[1]          ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDS[2]          ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; LEDS[3]          ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; eight_bit_bus[0] ; Bidir    ; (6) 1209 ps   ; --            ; --                    ; --  ; --   ;
+; eight_bit_bus[0] ; Bidir    ; --            ; (6) 1209 ps   ; --                    ; --  ; --   ;
 ; eight_bit_bus[1] ; Bidir    ; (6) 1209 ps   ; --            ; --                    ; --  ; --   ;
-; eight_bit_bus[2] ; Bidir    ; (6) 1209 ps   ; --            ; --                    ; --  ; --   ;
+; eight_bit_bus[2] ; Bidir    ; --            ; (6) 1209 ps   ; --                    ; --  ; --   ;
 ; eight_bit_bus[3] ; Bidir    ; (6) 1209 ps   ; --            ; --                    ; --  ; --   ;
 ; eight_bit_bus[4] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; eight_bit_bus[5] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; eight_bit_bus[6] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; eight_bit_bus[7] ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; pc_drive[0]      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; pc_drive[2]      ; Input    ; (6) 1211 ps   ; --            ; --                    ; --  ; --   ;
-; CLK              ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; pc_drive[3]      ; Input    ; (6) 1211 ps   ; --            ; --                    ; --  ; --   ;
 ; RESET            ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; CLK              ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; pc_drive[0]      ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; pc_drive[3]      ; Input    ; (6) 1211 ps   ; --            ; --                    ; --  ; --   ;
+; pc_drive[2]      ; Input    ; (6) 1211 ps   ; --            ; --                    ; --  ; --   ;
 ; pc_drive[1]      ; Input    ; --            ; (6) 1209 ps   ; --                    ; --  ; --   ;
 +------------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                         ;
-+------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                      ; Pad To Core Index ; Setting ;
-+------------------------------------------+-------------------+---------+
-; eight_bit_bus[0]                         ;                   ;         ;
-;      - binary_counter:counter|counter~2  ; 0                 ; 6       ;
-; eight_bit_bus[1]                         ;                   ;         ;
-;      - binary_counter:counter|counter[1] ; 0                 ; 6       ;
-; eight_bit_bus[2]                         ;                   ;         ;
-;      - binary_counter:counter|counter[2] ; 0                 ; 6       ;
-; eight_bit_bus[3]                         ;                   ;         ;
-;      - binary_counter:counter|counter~4  ; 0                 ; 6       ;
-; eight_bit_bus[4]                         ;                   ;         ;
-; eight_bit_bus[5]                         ;                   ;         ;
-; eight_bit_bus[6]                         ;                   ;         ;
-; eight_bit_bus[7]                         ;                   ;         ;
-; pc_drive[0]                              ;                   ;         ;
-; pc_drive[2]                              ;                   ;         ;
-;      - binary_counter:counter|counter[1] ; 0                 ; 6       ;
-;      - binary_counter:counter|counter[2] ; 0                 ; 6       ;
-;      - binary_counter:counter|counter~2  ; 0                 ; 6       ;
-;      - binary_counter:counter|counter~4  ; 0                 ; 6       ;
-; CLK                                      ;                   ;         ;
-;      - binary_counter:counter|counter[0] ; 0                 ; 0       ;
-;      - binary_counter:counter|counter[3] ; 0                 ; 0       ;
-;      - binary_counter:counter|counter[1] ; 0                 ; 0       ;
-;      - binary_counter:counter|counter[2] ; 0                 ; 0       ;
-; pc_drive[3]                              ;                   ;         ;
-;      - binary_counter:counter|always0~0  ; 0                 ; 6       ;
-; RESET                                    ;                   ;         ;
-; pc_drive[1]                              ;                   ;         ;
-;      - eight_bit_bus[0]~output           ; 1                 ; 6       ;
-;      - eight_bit_bus[1]~output           ; 1                 ; 6       ;
-;      - eight_bit_bus[2]~output           ; 1                 ; 6       ;
-;      - eight_bit_bus[3]~output           ; 1                 ; 6       ;
-;      - eight_bit_bus[4]~output           ; 1                 ; 6       ;
-;      - eight_bit_bus[5]~output           ; 1                 ; 6       ;
-;      - eight_bit_bus[6]~output           ; 1                 ; 6       ;
-;      - eight_bit_bus[7]~output           ; 1                 ; 6       ;
-+------------------------------------------+-------------------+---------+
++----------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                   ;
++----------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                ; Pad To Core Index ; Setting ;
++----------------------------------------------------+-------------------+---------+
+; eight_bit_bus[0]                                   ;                   ;         ;
+;      - binary_counter:counter|counter[0]~5         ; 1                 ; 6       ;
+; eight_bit_bus[1]                                   ;                   ;         ;
+;      - binary_counter:counter|counter[1]           ; 0                 ; 6       ;
+; eight_bit_bus[2]                                   ;                   ;         ;
+;      - binary_counter:counter|counter[2]           ; 1                 ; 6       ;
+; eight_bit_bus[3]                                   ;                   ;         ;
+;      - binary_counter:counter|counter[3]~7         ; 0                 ; 6       ;
+; eight_bit_bus[4]                                   ;                   ;         ;
+; eight_bit_bus[5]                                   ;                   ;         ;
+; eight_bit_bus[6]                                   ;                   ;         ;
+; eight_bit_bus[7]                                   ;                   ;         ;
+; RESET                                              ;                   ;         ;
+; CLK                                                ;                   ;         ;
+;      - binary_counter:counter|counter[0]~_emulated ; 0                 ; 0       ;
+;      - binary_counter:counter|counter[1]           ; 0                 ; 0       ;
+;      - binary_counter:counter|counter[2]           ; 0                 ; 0       ;
+;      - binary_counter:counter|counter[3]~_emulated ; 0                 ; 0       ;
+; pc_drive[0]                                        ;                   ;         ;
+; pc_drive[3]                                        ;                   ;         ;
+;      - binary_counter:counter|counter[2]~11        ; 0                 ; 6       ;
+;      - binary_counter:counter|counter[3]~13        ; 0                 ; 6       ;
+; pc_drive[2]                                        ;                   ;         ;
+;      - binary_counter:counter|counter[1]           ; 0                 ; 6       ;
+;      - binary_counter:counter|counter[2]           ; 0                 ; 6       ;
+;      - binary_counter:counter|counter[0]~5         ; 0                 ; 6       ;
+;      - binary_counter:counter|counter[3]~7         ; 0                 ; 6       ;
+; pc_drive[1]                                        ;                   ;         ;
+;      - eight_bit_bus[0]~output                     ; 1                 ; 6       ;
+;      - eight_bit_bus[1]~output                     ; 1                 ; 6       ;
+;      - eight_bit_bus[2]~output                     ; 1                 ; 6       ;
+;      - eight_bit_bus[3]~output                     ; 1                 ; 6       ;
+;      - eight_bit_bus[4]~output                     ; 1                 ; 6       ;
+;      - eight_bit_bus[5]~output                     ; 1                 ; 6       ;
+;      - eight_bit_bus[6]~output                     ; 1                 ; 6       ;
+;      - eight_bit_bus[7]~output                     ; 1                 ; 6       ;
++----------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                ;
-+----------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; Name                             ; Location           ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
-; CLK                              ; PIN_L13            ; 4       ; Clock         ; no     ; --                   ; --               ; --                        ;
-; binary_counter:counter|always0~0 ; LCCOMB_X31_Y33_N28 ; 4       ; Async. clear  ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; pc_drive[1]                      ; PIN_F14            ; 8       ; Output enable ; no     ; --                   ; --               ; --                        ;
-; pc_drive[2]                      ; PIN_C11            ; 4       ; Sync. load    ; no     ; --                   ; --               ; --                        ;
-+----------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                    ;
++--------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; Name                                 ; Location           ; Fan-Out ; Usage         ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
+; CLK                                  ; PIN_L13            ; 4       ; Clock         ; no     ; --                   ; --               ; --                        ;
+; binary_counter:counter|counter[0]~2  ; LCCOMB_X52_Y17_N6  ; 2       ; Async. clear  ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; binary_counter:counter|counter[2]~11 ; LCCOMB_X52_Y17_N16 ; 2       ; Async. clear  ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; pc_drive[1]                          ; PIN_F14            ; 8       ; Output enable ; no     ; --                   ; --               ; --                        ;
+; pc_drive[2]                          ; PIN_C11            ; 4       ; Sync. load    ; no     ; --                   ; --               ; --                        ;
++--------------------------------------+--------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                  ;
-+----------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                             ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; binary_counter:counter|always0~0 ; LCCOMB_X31_Y33_N28 ; 4       ; 0                                    ; Global Clock         ; GCLK11           ; --                        ;
-+----------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                      ;
++--------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                 ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; binary_counter:counter|counter[0]~2  ; LCCOMB_X52_Y17_N6  ; 2       ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
+; binary_counter:counter|counter[2]~11 ; LCCOMB_X52_Y17_N16 ; 2       ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
++--------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------+
@@ -809,33 +813,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+
 ; Routing Resource Type ; Usage                 ;
 +-----------------------+-----------------------+
-; Block interconnects   ; 25 / 71,559 ( < 1 % ) ;
-; C16 interconnects     ; 10 / 2,597 ( < 1 % )  ;
-; C4 interconnects      ; 22 / 46,848 ( < 1 % ) ;
-; Direct links          ; 1 / 71,559 ( < 1 % )  ;
-; Global clocks         ; 1 / 20 ( 5 % )        ;
-; Local interconnects   ; 6 / 24,624 ( < 1 % )  ;
-; R24 interconnects     ; 11 / 2,496 ( < 1 % )  ;
-; R4 interconnects      ; 30 / 62,424 ( < 1 % ) ;
+; Block interconnects   ; 30 / 71,559 ( < 1 % ) ;
+; C16 interconnects     ; 9 / 2,597 ( < 1 % )   ;
+; C4 interconnects      ; 23 / 46,848 ( < 1 % ) ;
+; Direct links          ; 3 / 71,559 ( < 1 % )  ;
+; Global clocks         ; 2 / 20 ( 10 % )       ;
+; Local interconnects   ; 11 / 24,624 ( < 1 % ) ;
+; R24 interconnects     ; 13 / 2,496 ( < 1 % )  ;
+; R4 interconnects      ; 20 / 62,424 ( < 1 % ) ;
 +-----------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 4.00) ; Number of LABs  (Total = 2) ;
+; Number of Logic Elements  (Average = 7.00) ; Number of LABs  (Total = 2) ;
 +--------------------------------------------+-----------------------------+
-; 1                                          ; 1                           ;
+; 1                                          ; 0                           ;
 ; 2                                          ; 0                           ;
-; 3                                          ; 0                           ;
+; 3                                          ; 1                           ;
 ; 4                                          ; 0                           ;
 ; 5                                          ; 0                           ;
 ; 6                                          ; 0                           ;
-; 7                                          ; 1                           ;
+; 7                                          ; 0                           ;
 ; 8                                          ; 0                           ;
 ; 9                                          ; 0                           ;
 ; 10                                         ; 0                           ;
-; 11                                         ; 0                           ;
+; 11                                         ; 1                           ;
 ; 12                                         ; 0                           ;
 ; 13                                         ; 0                           ;
 ; 14                                         ; 0                           ;
@@ -849,20 +853,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------+-----------------------------+
 ; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 2) ;
 +------------------------------------+-----------------------------+
-; 1 Async. clear                     ; 1                           ;
 ; 1 Clock                            ; 1                           ;
+; 2 Async. clears                    ; 1                           ;
 +------------------------------------+-----------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 6.00) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced  (Average = 9.00) ; Number of LABs  (Total = 2) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
-; 1                                           ; 1                           ;
+; 1                                           ; 0                           ;
 ; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
+; 3                                           ; 1                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
@@ -870,19 +874,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 8                                           ; 0                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
-; 11                                          ; 1                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 0                           ;
+; 13                                          ; 0                           ;
+; 14                                          ; 0                           ;
+; 15                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 2.50) ; Number of LABs  (Total = 2) ;
+; Number of Signals Sourced Out  (Average = 3.50) ; Number of LABs  (Total = 2) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
-; 1                                               ; 1                           ;
+; 1                                               ; 0                           ;
 ; 2                                               ; 0                           ;
-; 3                                               ; 0                           ;
+; 3                                               ; 1                           ;
 ; 4                                               ; 1                           ;
 +-------------------------------------------------+-----------------------------+
 
@@ -890,7 +898,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 5.00) ; Number of LABs  (Total = 2) ;
+; Number of Distinct Inputs  (Average = 6.50) ; Number of LABs  (Total = 2) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -900,7 +908,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
-; 8                                           ; 1                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 0                           ;
+; 10                                          ; 0                           ;
+; 11                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -977,11 +988,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; eight_bit_bus[5]   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; eight_bit_bus[6]   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; eight_bit_bus[7]   ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; pc_drive[0]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; pc_drive[2]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; CLK                ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; pc_drive[3]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; RESET              ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; CLK                ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; pc_drive[0]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; pc_drive[3]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; pc_drive[2]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; pc_drive[1]        ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass      ; Pass         ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -1048,12 +1059,15 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location F16
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Critical Warning (169085): No exact pin location assignment(s) for 4 pins of 18 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'computer.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
-Info (176353): Automatically promoted node binary_counter:counter|always0~0 
+Info (176353): Automatically promoted node binary_counter:counter|counter[0]~2  File: C:/Users/momer/UMary/CSC457/8BitComputer/binary_counter.v Line: 32
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+Info (176353): Automatically promoted node binary_counter:counter|counter[2]~11  File: C:/Users/momer/UMary/CSC457/8BitComputer/binary_counter.v Line: 32
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
@@ -1089,13 +1103,13 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 1 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone 10 LP Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin CLK uses I/O standard 3.3-V LVCMOS at L13 File: C:/Users/momer/UMary/CSC457/8BitComputer/computer.v Line: 3
 Info (144001): Generated suppressed messages file C:/Users/momer/UMary/CSC457/8BitComputer/output_files/computer.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 5984 megabytes
-    Info: Processing ended: Sat Feb 28 22:04:05 2026
+    Info: Processing ended: Mon Mar  2 22:59:53 2026
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:06
 

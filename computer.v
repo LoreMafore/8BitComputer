@@ -21,11 +21,11 @@ assign COUNTER_CLEAR  = pc_drive[3];
 //Program Counter
 binary_counter counter(
     .clk(CLK),
-	.bus(eight_bit_bus),
-    .counter_enable(ENABLE_COUNTER),
-    .counter_out(COUNTER_OUT),
-    .counter_in(COUNTER_IN),
-    .clear(COUNTER_CLEAR),
+	 .bus(eight_bit_bus),
+    .counter_enable(~ENABLE_COUNTER),
+    .counter_out(~COUNTER_OUT),
+    .counter_in(~COUNTER_IN),
+    .clear(~COUNTER_CLEAR),
     .reset(RESET),
     .leds(LEDS)
 );

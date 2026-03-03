@@ -52,11 +52,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "pc_drive[0]",
-					"strict" : false
-				},
-				{
-					"name" : "pc_drive[2]",
+					"name" : "RESET",
 					"strict" : false
 				},
 				{
@@ -64,11 +60,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "pc_drive[0]",
+					"strict" : false
+				},
+				{
 					"name" : "pc_drive[3]",
 					"strict" : false
 				},
 				{
-					"name" : "RESET",
+					"name" : "pc_drive[2]",
 					"strict" : false
 				},
 				{

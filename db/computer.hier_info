@@ -1,8 +1,8 @@
 |computer
-pc_drive[0] => ENABLE_COUNTER.IN1
-pc_drive[1] => COUNTER_OUT.IN1
-pc_drive[2] => COUNTER_IN.IN1
-pc_drive[3] => COUNTER_CLEAR.IN1
+pc_drive[0] => _.IN1
+pc_drive[1] => _.IN1
+pc_drive[2] => _.IN1
+pc_drive[3] => _.IN1
 CLK => CLK.IN1
 RESET => RESET.IN1
 eight_bit_bus[0] <> binary_counter:counter.bus
@@ -48,8 +48,12 @@ counter_in => counter.OUTPUTSELECT
 counter_in => counter.OUTPUTSELECT
 counter_in => counter.OUTPUTSELECT
 counter_in => counter.OUTPUTSELECT
-clear => always0.IN0
-reset => always0.IN1
+clear => counter[2].IN0
+clear => counter[3].IN0
+reset => counter[0].PRESET
+reset => counter[2].IN1
+reset => counter[3].PRESET
+reset => counter[3].IN1
 leds[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
 leds[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
 leds[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE

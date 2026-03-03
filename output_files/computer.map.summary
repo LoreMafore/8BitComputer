@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sat Feb 28 22:04:00 2026
+Analysis & Synthesis Status : Successful - Mon Mar  2 22:59:48 2026
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : computer
 Top-level Entity Name : computer
 Family : Cyclone 10 LP
-Total logic elements : 8
-    Total combinational functions : 8
+Total logic elements : 14
+    Total combinational functions : 14
     Dedicated logic registers : 4
 Total registers : 4
 Total pins : 18
