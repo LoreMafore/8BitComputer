@@ -10,14 +10,26 @@ module binary_counter(
     );
     
     reg [3:0] counter;
+	 reg [3:0] bus_latch;
+	 
     initial begin
 		  leds = 4'b0001;
         counter = 4'b0001;
+		  bus_latch = 4'b0000;
     end
 	 
-    assign bus = counter_out ? {4'b0000, counter} : 8'bz;
+    assign bus[7:4] = 4'bz;
+	 assign bus[3:0] = bus_latch;
+	 
+	 always @(posedge clk or posedge reset)
+    begin
+        if (reset)
+            bus_latch <= 4'b0000;
+        else if (counter_out)
+            bus_latch <= counter;
+    end
 
-    always @(posedge clk or posedge reset or posedge clear)
+    always @(posedge clk or posedge reset)
     begin
         if (reset)
         begin
