@@ -10,27 +10,25 @@ module binary_counter(
 );
 
     localparam LOCKOUT_CYCLES = 27'd50_000_000;
-    localparam COUNT_CYCLES   = 27'd100_000_000;
-
+	 
     reg [3:0]  counter;
     reg [3:0]  bus_latch;
     reg        is_counter_enabled;
     reg        counter_enable_prev;
     reg        counter_out_prev;
+	 reg        counter_in_prev;
     reg [26:0] enable_lockout_timer;
     reg        in_lockout;
-    reg [26:0] count_timer;
-
     initial begin
-        leds                 = 4'b0001;
-        counter              = 4'b0001;
+        leds                 = 4'b0000;
+        counter              = 4'b0000;
         bus_latch            = 4'b0000;
         is_counter_enabled   = 1'b0;
         counter_enable_prev  = 1'b0;
         counter_out_prev     = 1'b0;
+		  counter_in_prev      = 1'b0;
         enable_lockout_timer = 27'd0;
         in_lockout           = 1'b0;
-        count_timer          = 27'd0;
     end
 
     assign bus[7:4] = 4'bz;
@@ -43,13 +41,14 @@ module binary_counter(
             is_counter_enabled   <= 1'b0;
             counter_enable_prev  <= 1'b0;
             counter_out_prev     <= 1'b0;
+				counter_in_prev      <= 1'b0;
             in_lockout           <= 1'b0;
             enable_lockout_timer <= 27'd0;
-            count_timer          <= 27'd0;
         end else begin
 
             counter_enable_prev <= counter_enable;
             counter_out_prev    <= counter_out;
+				counter_in_prev     <= counter_in;
 
             if (counter_out && !counter_out_prev)
                 bus_latch <= counter;
@@ -69,20 +68,11 @@ module binary_counter(
                 end
             end
 
-            if (counter_in) begin
-                counter     <= bus[3:0];
-                count_timer <= 27'd0;
+				if (counter_in && !counter_in_prev) begin
+                counter <= bus[3:0];
             end else if (is_counter_enabled) begin
-                if (count_timer >= COUNT_CYCLES - 1'b1) begin
-                    count_timer <= 27'd0;
-                    counter     <= counter + 1'b1;
-                end else begin
-                    count_timer <= count_timer + 1'b1;
-                end
-            end else begin
-                count_timer <= 27'd0;
+                counter <= counter + 1'b1;
             end
-
         end
     end
 
@@ -91,3 +81,4 @@ module binary_counter(
     end
 
 endmodule
+
