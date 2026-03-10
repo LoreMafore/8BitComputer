@@ -18,7 +18,13 @@ Thumbs.db
 *.swo
 *~
 
-*.v.bak
+#Random ah files
+*.bak
+*.qsf
+*.qpf
+*.qws
+
 db/
 incremental_db/
 output_files/
+simulation/
