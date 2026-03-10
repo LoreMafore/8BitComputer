@@ -32,6 +32,12 @@ binary_counter counter(
   
 
 //A_B_ALU
+alu alu_a_b(
+	.clk(CLK),
+	.bus(eight_bit_bus),
+	.clear(COUNTER_CLEAR),
+	.reset(RESET)
+)
 
 
 //Output Register
