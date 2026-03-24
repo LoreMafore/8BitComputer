@@ -4,9 +4,6 @@ module computer(
     input RESET,
     inout [7:0] eight_bit_bus,
     output [3:0] LEDS, 
-    // inout [7:0] REG_A,
-    // inout [7:0] REG_B,
-    output [7:0] ALU_VALUE,
     output [5:0] ALU_WIRES
 );
 
@@ -54,9 +51,6 @@ alu a_b_alu(
     .bus(eight_bit_bus),
     .clear(COUNTER_CLEAR),
     .reset(RESET),
-    // .reg_a(REG_A),
-    // .reg_b(REG_B),
-    .alu_value(ALU_VALUE),
     .alu_flag(ALU_FLAG),
     .a_in_flag(A_IN_FLAG),
     .a_out_flag(A_OUT_FLAG),

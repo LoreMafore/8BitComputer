@@ -1,7 +1,6 @@
 module alu(
     input clk,
-    inout reg [7:0] bus,
-    output reg [7:0] alu_value,
+    inout wire[7:0] bus,
     input wire clear,
     input wire reset, 
     input wire alu_flag,
@@ -12,11 +11,15 @@ module alu(
     input wire b_sub
 );
 
-
-reg a_in, b_in, alu_in;
+reg a_in, b_in;
 reg a_ack, b_ack, alu_ack;
 reg [7:0] reg_a;
 reg [7:0] reg_b;
+reg [7:0] alu_value;
+
+assign bus = a_out_flag ? reg_a :
+             b_out_flag ? reg_b :
+             alu_flag   ? alu_value : 8'bz;
 
 initial begin
     reg_a     = 8'b00001100;
@@ -42,21 +45,7 @@ always @(posedge a_in_flag or posedge a_ack)
 always @(posedge b_in_flag or posedge b_ack) 
     if(b_ack) b_in <= 1'b0; else b_in <= 1'b1;
 
-always @(posedge a_out_flag or posedge b_out_flag or alu_flag)begin
-    if(a_out_flag) begin 
-        bus <= reg_a;
-    end 
-    
-    if(b_out_flag) begin 
-        bus <= reg_b;
-    end 
-
-    if(alu_flag) begin 
-        bus <= alu_value;
-    end
-end
-
-always @(posedge clk or posedge clear or posedge reset)
+always @(posedge clk or posedge clear or posedge reset) begin
     if(clear) begin
         reg_a <= 8'b00000000;
         a_ack <= 1'b0;
@@ -80,5 +69,6 @@ always @(posedge clk or posedge clear or posedge reset)
             b_ack <= 1'b1;
         end
     end
+end
 
 endmodule
