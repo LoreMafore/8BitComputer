@@ -13,6 +13,7 @@ wire COUNTER_OUT;
 wire COUNTER_IN;
 wire COUNTER_CLEAR;
 
+assign ENABLE_COUNTER = ~pc_drive[0];
 assign COUNTER_OUT    = ~pc_drive[1];
 assign COUNTER_IN     = ~pc_drive[2];
 assign COUNTER_CLEAR  = ~pc_drive[3];

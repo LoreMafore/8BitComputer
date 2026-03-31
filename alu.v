@@ -2,7 +2,7 @@ module alu(
     input clk,
     inout wire [7:0] bus,
     input wire clear,
-    input wire reset, 
+  //  input wire reset, 
     input wire alu_flag,
     input wire a_out_flag,
     input wire a_in_flag,
@@ -52,10 +52,10 @@ always @(posedge clk or posedge clear or posedge reset) begin
         reg_a <= 8'b00000000;
         a_ack <= 1'b0;
     end
-    else if(reset) begin
-        reg_b <= 8'b00000000;
-        a_ack <= 1'b0;
-    end
+  //  else if(reset) begin
+    //    reg_b <= 8'b00000000;
+      //  a_ack <= 1'b0;
+    //end
     else begin
         {a_ack, b_ack, alu_ack} <= 3'b000;
         if (a_in) begin
