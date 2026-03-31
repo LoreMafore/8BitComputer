@@ -4,7 +4,7 @@ module computer(
     input RESET,
     inout [7:0] eight_bit_bus,
     output [3:0] LEDS, 
-    output [5:0] ALU_WIRES
+    input [5:0] ALU_WIRES
 );
 
 //Control Wires 
@@ -51,7 +51,7 @@ alu a_b_alu(
     .clk(CLK),
     .bus(eight_bit_bus),
     .clear(COUNTER_CLEAR),
-    .reset(RESET),
+    //.reset(RESET),
     .alu_flag(ALU_FLAG),
     .a_in_flag(A_IN_FLAG),
     .a_out_flag(A_OUT_FLAG),

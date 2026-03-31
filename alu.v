@@ -32,9 +32,9 @@ end
 
 always @(*) begin
     if (a_out_flag)
-        bus_latch = reg_a;
+        bus_latch = 8'b00001001;
     else if (b_out_flag)
-        bus_latch = reg_b;
+        bus_latch = 8'b10010000;
     else if (alu_flag)
         bus_latch = 8'b00000001;
 end
@@ -47,7 +47,7 @@ always @(posedge a_in_flag or posedge a_ack)
 always @(posedge b_in_flag or posedge b_ack) 
     if(b_ack) b_in <= 1'b0; else b_in <= 1'b1;
 
-always @(posedge clk or posedge clear or posedge reset) begin
+always @(posedge clk or posedge clear) begin
     if(clear) begin
         reg_a <= 8'b00000000;
         a_ack <= 1'b0;
