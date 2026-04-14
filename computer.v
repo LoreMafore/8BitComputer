@@ -4,7 +4,8 @@ module computer(
     input RESET,
     inout [7:0] eight_bit_bus,
     output [3:0] LEDS, 
-    input [5:0] ALU_WIRES
+    input [5:0] ALU_WIRES,
+	 output board_led
 );
 
 //Control Wires 
@@ -57,7 +58,8 @@ alu a_b_alu(
     .a_out_flag(A_OUT_FLAG),
     .b_in_flag(B_IN_FLAG),
     .b_out_flag(B_OUT_FLAG),
-    .b_sub(B_SUB)
+    .b_sub(B_SUB),
+	 .led(board_led)
 );
 
 

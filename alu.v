@@ -8,7 +8,8 @@ module alu(
     input wire a_in_flag,
     input wire b_out_flag,
     input wire b_in_flag,
-    input wire b_sub
+    input wire b_sub,
+    output reg led
 );
 
 reg [7:0] reg_a;
@@ -23,20 +24,32 @@ initial begin
     alu_value = 8'b00000000;
 end
 
-always @(*) begin
-    if (b_sub == 1'b0)
-        alu_value = reg_a + reg_b;
-    else
-        alu_value = reg_a - reg_b;
+always @(*)begin
+	led = ~a_out_flag;
 end
 
 always @(*) begin
-    if (a_out_flag)
-        bus_latch = 8'b00001001;
-    else if (b_out_flag)
-        bus_latch = 8'b10010000;
-    else if (alu_flag)
-        bus_latch = 8'b00000001;
+    if (b_sub == 1'b0) begin
+        alu_value = reg_a + reg_b;
+    end
+    else begin
+        alu_value = reg_a - reg_b;
+    end
+end
+
+always @(*) begin
+    if (a_out_flag == 1'b1) begin
+        bus_latch = reg_a;
+    end
+    else if (b_out_flag == 1'b1) begin
+        bus_latch = reg_b;
+    end
+    else if (alu_flag == 1'b1) begin
+        bus_latch = alu_value;
+    end
+    else begin
+        bus_latch = 8'b00000000;
+    end
 end
 
 assign bus = (a_out_flag || b_out_flag || alu_flag) ? bus_latch : 8'bz;
