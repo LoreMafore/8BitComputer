@@ -7,3 +7,8 @@ Deployment:
 Synthesize the project using your assigned FPGA toolchain (Quartus/Vivado).
 Assign Pins to match the header connections on the breadboard computer.
 Flash the code to the fpga.
+
+Completion:
+We were not able to complete the project but we made very good progress. We implemented a functioning Binary Counter, ALU, RAM, Clock, and MAR. There is still alot that could be done. Even though we did not finish the whole project we learned valuable skills. We learned circuit debugging, Verilog, and how FPGA boards function
+
+
