@@ -37,22 +37,10 @@ always @(*) begin
     end
 end
 
-always @(*) begin
-    if (a_out_flag == 1'b1) begin
-        bus_latch = reg_a;
-    end
-    else if (b_out_flag == 1'b1) begin
-        bus_latch = reg_b;
-    end
-    else if (alu_flag == 1'b1) begin
-        bus_latch = alu_value;
-    end
-    else begin
-        bus_latch = 8'b00000000;
-    end
-end
-
-assign bus = (a_out_flag || b_out_flag || alu_flag) ? bus_latch : 8'bz;
+assign bus = a_out_flag ? reg_a:
+             b_out_flag ? reg_b:
+             alu_flag   ? alu_value:
+             8'bz;
 
 always @(posedge a_in_flag or posedge a_ack) 
     if(a_ack) a_in <= 1'b0; else a_in <= 1'b1;
