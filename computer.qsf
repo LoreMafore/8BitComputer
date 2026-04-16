@@ -19,7 +19,7 @@
 #
 # Quartus Prime
 # Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-# Date created = 08:33:49  February 19, 2026
+# Date created = 09:05:14  March 10, 2026
 #
 # -------------------------------------------------------------------------- #
 #
@@ -41,7 +41,7 @@ set_global_assignment -name FAMILY "Cyclone 10 LP"
 set_global_assignment -name DEVICE 10CL025YU256I7G
 set_global_assignment -name TOP_LEVEL_ENTITY computer
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 24.1STD.0
-set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:33:49  FEBRUARY 19, 2026"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:05:14  MARCH 10, 2026"
 set_global_assignment -name LAST_QUARTUS_VERSION "24.1std.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
@@ -55,24 +55,62 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name VERILOG_FILE computer.v
-set_global_assignment -name VERILOG_FILE binary_counter.v
+set_global_assignment -name VERILOG_FILE alu.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_L13 -to CLK
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CLK
-set_location_assignment PIN_R1 -to LEDS[3]
-set_location_assignment PIN_P2 -to LEDS[2]
-set_location_assignment PIN_T3 -to LEDS[1]
-set_location_assignment PIN_P3 -to LEDS[0]
+set_location_assignment PIN_E15 -to pc_drive[0]
+set_location_assignment PIN_F14 -to pc_drive[1]
+set_location_assignment PIN_C11 -to pc_drive[2]
+set_location_assignment PIN_D9 -to pc_drive[3]
 set_location_assignment PIN_L16 -to eight_bit_bus[0]
 set_location_assignment PIN_K16 -to eight_bit_bus[1]
 set_location_assignment PIN_R16 -to eight_bit_bus[2]
 set_location_assignment PIN_N15 -to eight_bit_bus[3]
-set_location_assignment PIN_D9 -to pc_drive[3]
-set_location_assignment PIN_C11 -to pc_drive[2]
-set_location_assignment PIN_F14 -to pc_drive[1]
-set_location_assignment PIN_E15 -to pc_drive[0]
+set_location_assignment PIN_P8 -to eight_bit_bus[4]
+set_location_assignment PIN_L8 -to eight_bit_bus[5]
+set_location_assignment PIN_T7 -to eight_bit_bus[6]
+set_location_assignment PIN_M7 -to eight_bit_bus[7]
 set_location_assignment PIN_L15 -to RESET
+set_location_assignment PIN_P3 -to LEDS[0]
+set_location_assignment PIN_T3 -to LEDS[1]
+set_location_assignment PIN_P2 -to LEDS[2]
+set_location_assignment PIN_R1 -to LEDS[3]
+set_location_assignment PIN_L13 -to CLK
+set_location_assignment PIN_T4 -to ALU_WIRES[0]
+set_location_assignment PIN_R4 -to ALU_WIRES[1]
+set_location_assignment PIN_N5 -to ALU_WIRES[2]
+set_location_assignment PIN_R3 -to ALU_WIRES[3]
+set_location_assignment PIN_P6 -to ALU_WIRES[4]
+set_location_assignment PIN_P1 -to ALU_WIRES[5]
+set_location_assignment PIN_K15 -to board_led
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ALU_WIRES[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ALU_WIRES[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ALU_WIRES[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ALU_WIRES[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ALU_WIRES[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ALU_WIRES[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ALU_WIRES
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDS[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDS[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDS[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDS[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RESET
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board_led
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to eight_bit_bus[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to eight_bit_bus[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to eight_bit_bus[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to eight_bit_bus[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to eight_bit_bus[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to eight_bit_bus[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to eight_bit_bus[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to eight_bit_bus[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to eight_bit_bus
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pc_drive[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pc_drive[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pc_drive[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pc_drive[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to pc_drive
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
