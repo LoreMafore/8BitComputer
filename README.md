@@ -7,7 +7,7 @@
 
 A Verilog FPGA implementation of Ben Eater's classic 8-bit breadboard computer, built for **CSC 457: Hardware Programming**. Rather than relying purely on discrete 74-series TTL logic chips, the core computational units were re-implemented in Verilog and synthesized onto a physical FPGA board — which then interfaces directly with the breadboard hardware via header pin connections.
 
-<img width="4284" height="5712" alt="8-Bit Computer Build" src="https://github.com/user-attachments/assets/1c5f3cd1-689f-4521-89a7-baa90a2553c5" />
+<img width="4284" height="5712" alt="8-Bit Computer Build" src="https://github.com/user-attachments/assets/1c5f3cd1-689f-4525-89a7-baa90a2553c5" />
 
 ---
 
